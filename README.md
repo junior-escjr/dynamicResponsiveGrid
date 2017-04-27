@@ -1,1 +1,1 @@
-# dynamicResponsiveGrid
+# Grid dinâmico e sugestão de estrutura de pastas

@@ -1,0 +1,29 @@
+.main_body {
+	background-color: red;
+	@include make-row();
+}
+
+.box {
+	width: 100%;
+	background-color: blue;
+	@include make-grid-column(12, 0, 0);
+	@include make-grid-column(6, 480px, 50px);
+
+	@include make-grid-column(2, 640px);
+	@include make-grid-column-offset(1, 640px);
+
+	@include make-grid-column(3, 1000px);
+	@include make-grid-column-offset(0, 1000px);
+}
+
+.teste {background-color: white;}
+
+.content {
+	@include make-grid-column(8, 0, 15px);
+	@include make-grid-column-push(4);
+}
+
+.sidebar {
+	@include make-grid-column(4, 0, 15px);
+	@include make-grid-column-pull(8);
+}
