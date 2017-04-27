@@ -1,1 +1,1 @@
-# Grid dinâmico e sugestão de estrutura de pastas
+# Grid Flexivel e Sugestão de estrutura de pastas

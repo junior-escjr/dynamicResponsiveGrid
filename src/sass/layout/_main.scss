@@ -18,7 +18,7 @@
 
 .teste {background-color: white;}
 
-.content {
+.contents {
 	@include make-grid-column(8, 0, 15px);
 	@include make-grid-column-push(4);
 }

@@ -14,7 +14,7 @@
 @mixin make-row($gutter: $grid-gutter-width) {
   margin-left:  ceil(($gutter / -2));
   margin-right: floor(($gutter / -2));
-  @include clearfix;
+  @extend .cf;
 }
 
 @mixin make-grid-column-offset($columns, $breakpoint: $break-point-default) {
