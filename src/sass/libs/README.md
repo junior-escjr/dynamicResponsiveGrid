@@ -1,1 +1,1 @@
-#Adicionar arquivos extras como por exemplo arquivos de plugins
+# Adicionar arquivos extras como por exemplo arquivos de plugins
