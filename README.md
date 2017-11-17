@@ -9,12 +9,12 @@ Segue abaixo como usar o grid e a estrutura da pasta usada.
 
 ├── sass/
 |   ├── helpers/
-|   |    |
-|   |    ├── mixins/
-|	|	 |	  └── _grid.scss
-|	|	 |
+|   |  |  |
+|   |  |  ├── mixins/
+|	  |	 |	└── _grid.scss
+|	  |	 |
 |   |	 └── _mixins.scss
-|	|
+|	  |
 |   ├── layout/
 |   |    └── _grid.scss
 |   |
