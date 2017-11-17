@@ -1,1 +1,0 @@
-# Ficará os arquivos finais
