@@ -4,32 +4,42 @@ Esse grid é uma versão melhorada do Bootstrap, pois senti a necessidade de out
 Segue abaixo como usar o grid e a estrutura da pasta usada para organizar os arquivos do sass.
 
 ## Estrutura das pastas
+O link abaixo é o repositório indicado para a utilização desse GRID, mas sem problema caso não queira segui-lo.
+- [Link para o repositório](https://github.com/junior-escjr/folderStructure)
 
-```
-.src
-
-├── sass/
-|   ├── helpers/
-|   |    |
-|   |    ├── mixins/
-|   |    |   └── _grid.scss
-|   |    |
-|   |	 └── _mixins.scss
-|   |
-|   ├── layout/
-|   |    └── _grid.scss
-|   |
-|   └── all.scss
-|									
-├── .gitignore	
-└── README.md
-```
 
 ## Como usar o GRID
 
+Exemplificando com as variáveis
+
+```
+@include make-grid-column($columns, $breakpoint, $gutter);
+
+```
+
+Como usar na classe (no caso abaixo usando 6 colunas com a breakpoint e o espaçamento default).
+
 ```
 .nome_da_classe {
-	@include make-grid-column($columns, $breakpoint: $break-point-default, $gutter: $grid-gutter-width);
+	@include make-grid-column(6);
+}
+
+```
+
+Agora passando como parâmetro as colunas e o breakpoint.
+
+```
+.nome_da_classe {
+	@include make-grid-column(6, 500px);
+}
+
+```
+
+Agora passando como parâmetro as colunas, breakpoint e o espaçamento das laterais da coluna.
+
+```
+.nome_da_classe {
+	@include make-grid-column(6, 500px, 50px);
 }
 
 ```
