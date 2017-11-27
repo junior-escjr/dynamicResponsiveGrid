@@ -15,10 +15,9 @@ O link abaixo é o repositório indicado para a utilização desse GRID, mas sem
 
 ```
 @include make-grid-column($columns, $breakpoint, $gutter);
-
 ```
 
-Como usar na classe (no caso abaixo usando 6 colunas com a breakpoint e o espaçamento definidos ).
+1 - Como usar na classe (no caso abaixo usando 6 colunas com a breakpoint e o espaçamento definidos ).
 
 ```
 .nome_da_classe {
@@ -39,7 +38,7 @@ Resultado:
 }
 ```
 
-Agora o exemplo abaixo estou utilizando a mesma função mais de uma vez na mesma classe, mas com breakpoints e quantidade de colunas diferentes. O primeiro o breakpoint começa a partir do zero, já o segundo a partir de 451px.
+2 - Agora o exemplo abaixo estou utilizando a mesma função mais de uma vez na mesma classe, mas com breakpoints e quantidade de colunas diferentes. O primeiro o breakpoint começa a partir do zero, já o segundo a partir de 451px.
 
 ```
 .nome_da_classe {
@@ -74,8 +73,7 @@ Resultado:
 }
 
 ```
-
-No próximo exemplo vou utilizar todos os três parâmetros. O terceiro parâmetro altera a espaçamento das laterais da coluna.
+3 - No próximo exemplo vou utilizar todos os três parâmetros. O terceiro parâmetro altera a espaçamento das laterais da coluna.
 
 ```
 .nome_da_classe {
@@ -96,39 +94,41 @@ Resultado
 }
 ```
 
-## Explicação do mixin make-grid-column
-
-```
-1. Variável $columns
-	Quantidade de colunas a serem utilizadas. Máximo de 12 colunas, porque esta configurada essa quantidade no arquivo '_variable_grid.scss'.
-```
-
-```
-2. Variável $breakpoint
-	O próprio nome já diz. Digite o ponto aonde terá a alteração de como será o comportamento da DIV. Caso não informe o valor, por default o breakpoint começará com o valor '0', pois é o valor setado na variável $break-point-default que se encontra no arquivo '_variable_grid.scss'.
-```
-
-```
-3. Variável $gutter
-	O parâmetro que essa variável receber irá alterar o espaçamento das laterais da coluna. Caso não sete algum valor por padrão ela terá 15px, se quiser alterar acesse o arquivo '_variable_grid.scss'.
-```
-
-
 ## Como usar o GRID junto com o 'offset'
 
-Include do mixin offset é do mesmo jeito que do mixin explicado acima.
+A forma que é usado o mixin 'offset' é igual ao mixin das colunas, a diferença que a função usa dois parâmetros ao invés de três.
 
 ```
 @include make-grid-column-offset($columns, $breakpoint);
-
 ```
 
-Utilizando o mixin do offset na classe acompanhado do mixin das colunas. No primeiro caso
+
+Utilizando o mixin do offset na classe acompanhado do mixin das colunas.
 
 ```
 .nome_da_classe {
 	@include make-grid-column(6);
 	@include make-grid-column-offset(3);
 }
+```
 
+Resultado do offset
+
+```
+.nome_da_classe {
+    margin-left: 8.33333%;
+}
+```
+
+Resultado da coluna
+
+```
+.nome_da_classe {
+    position: relative;
+    min-height: 1px;
+    padding-left: 25px;
+    padding-right: 25px;
+    float: left;
+    width: 83.33333%;
+}
 ```
